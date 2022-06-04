@@ -1,0 +1,338 @@
+*{box-sizing: border-box;}      /*para que al por ejm restar tamaño, respete el tamaño anterior, los elementos no crecen al darles espacios internos, osea paddins*/
+body{font-family: "Roboto";}
+p{color: black;}
+a{display: inline-block;}       /*uno al ldo de otro pero le puedo dar alto y hay espacio en medio */
+
+header{
+    background-color: black;
+    padding: 15px 0;                    /*espacio hacia adntro, margen pone eespacios afuera*/
+    position: fixed;                    /*posicion fija, nos sigue en todas las pantallas*/
+    top: 0;
+    left: 0;                            /* como con fixed ya no ocupa un espacio en la estructura, se coloca para que se ponga antes de la otra section*/
+    z-index: 2;
+    width: 100%;}
+
+header .container{
+    display: flex;                      /*aprovecha el espacio para acomodar los subsistemas*/
+    justify-content: space-between;     /*centra y pone espacio entre ellos*/
+    align-items: center;}                /*alineacion eje y*/
+
+header .container .hamb{
+    display: none;}
+
+footer.seccion{
+    background-color: black;
+    color:white;
+    padding-bottom: 0;}
+
+footer .barra-footer{
+    background-color: gray;
+    text-align: center;
+    padding: 20px 15px;}
+
+footer .logo-footer{
+    width: 100%;}
+
+footer p{
+    color: white;
+    text-align: center;}
+
+footer ul{
+    padding-left: 0;
+    list-style: none;
+    margin: 0;}
+
+footer ul li{
+    margin-bottom: 7px;}
+
+footer .redes{
+    font-size: 40px;
+    display: flex;}
+
+footer .redes a {
+    margin: 0 7.5px;
+    color: red;}
+
+footer .linlex{
+    margin-left: 20%;
+    text-decoration: none;
+    color: red;}
+
+.seccion{
+    padding-top: 60px;
+    padding-bottom: 60px;}
+
+.container{
+    width: 1140px;          /* ancho de los containers*/ 
+    margin: 0 auto;         /* margen 0 arriba y abajo, auto a los lados*/
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;} 
+
+.container-fluid{
+    width: 100%;          /* para que abarque todo el ancho de la pantalla*/ 
+    padding-left: 15px;
+    padding-right: 15px;}
+
+.row{
+    display: flex;  /*para mostrar los subsistemas en el espacio, ejm columnas*/
+    flex-wrap: wrap;       /*para que si una columna no cabe en el espacio, la ponga debajo, lo contrario "nowrap" obligaria a todas a caber en uan fila pero se podria ver raro*/
+    margin-left: -15px;
+    margin-right: -15px;}
+
+.columna{
+    padding-left: 15px;
+    padding-right: 15px;}
+
+.columna-25{
+    width: 25%;}
+
+.columna-33{
+    width: 33.33%;}
+
+.columna-50{
+    width: 50%;}
+
+.empujar-50{
+    margin-left: 50%;}
+.empujar-0{
+    margin-left:0;}
+
+header .container .logo{
+    width: 150px;}
+
+.boton{
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;}
+
+.boton.boton-rojo{
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    font-size: 15px;}
+
+.boton-negro{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;}
+
+.boton-negro:hover{
+    color: black;background-color: white;}
+
+.boton.boton-blanco{
+    color: red;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid red;
+    padding: 4px;
+    margin-left: 40%;}
+
+header .container nav a{     /*para los a dentro de header*/
+    color: red;
+    text-decoration: none;      /*quitamos la linea debajo de los a*/
+    margin: 0 15px;}
+
+#inicio{
+    position: relative;}     /*se podria mover con 5 propiedades pero la pagina le guarda el espacio inicial*/
+
+#inicio img {
+    width: 100%;
+    display: block;} /*para que no tenga espacios*/
+
+#inicio .bloque-inicio{
+    position: absolute;     /*se puede mover con 5 propiedades pero la pagina no le da un espacio inicial y debe existir en otro elemento con posicion relativa o absoluta*/
+    top: 40%;
+    left: 40%;
+    right: 40%;
+    width: 400px;
+    text-align: center;
+    margin-left: -200px;}        /*solo el msrgen trabaja con negativos*/
+
+#inicio .bloque-inicio h1{
+    color: white;
+    font-size: 35px;}
+
+#inicio .bloque-inicio p{
+    color: white;}
+
+#nosotros{
+    background-image: url(img/latas.jpg);
+    background-size: cover;;}
+
+#nosotros p{
+    color: white;
+    text-align: center;
+    font-size: 16px;}
+
+#servicios .bloque-servicios{
+    border: 1px solid gray;}
+
+.cuadrado-perfecto {
+    width: 100%; padding-bottom: 100%; position: relative;}
+.cuadrado-perfecto img{
+    width: 100%; height: 100%; object-fit: cover;object-position: center; position: absolute; top: 0; left: 0;}
+
+#servicios .bloque-servicios .bloque-img-servicios{}
+
+#servicios .bloque-servicios .bloque-img-servicios img{
+    width: 100%;}
+
+#servicios .bloque-servicios .bloque-img-servicios.cuadrado-perfecto{
+    padding-bottom: 56.25%;}
+
+#servicios .bloque-servicios .bloque-texto-servicios{
+    padding-left: 15px;
+    padding-right: 15px;}
+
+#servicios .bloque-servicios .bloque-texto-servicios h3{
+    margin-top: 0;
+    font-size: 25px;
+    color: red;
+    text-align: center;}
+
+#galeria{}
+
+#galeria h4{
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    top: 45%;
+    width: 100%;}
+
+#galeria img{
+    filter: grayscale(1);}          /*imagen a blanco y negro*/
+
+#galeria .cuadrado-perfecto:hover img{  /*con :hover es para que algo pase cuando pongo el puntero sobre esto*/
+    filter: grayscale(0);}
+
+#galeria .cuadrado-perfecto:hover h4{
+    display: none;}             /*no se muestra*/
+
+#contactenos{position: relative;}
+
+#contactenos iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);}
+
+#contactenos form {
+    padding: 60px;
+    background-color: red;}
+
+#contactenos form .block-form{
+    width: 100%;
+    padding-bottom: 15px;}
+
+#contactenos form .block-form .form-control{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid gray;
+    padding: 5px 10px;}
+
+#contactenos form .block-form textarea{
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-size: 16px;
+    border: 1px solid gray;
+    padding: 5px 10px;}
+
+#contactenos form .block-form.ultimo-bloque{
+    margin-bottom: 0;}
+
+@media(max-width:767px)  /*megaquery para celular, porque 768 ya es tablet*/
+{
+body{font-size: 15px;}
+
+header .container nav{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: red;
+    padding:80px 15px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    transform: translateX(100%);}
+
+header .container nav a {
+    font-size: 30px;
+    margin: 15px 0;}
+
+header .container .hamb{
+    display: block;
+    font-size: 40px;
+    color: red;}
+
+form .boton-negro{
+    width: 100%;}
+
+footer {
+    text-align: center;}
+
+footer .linlex{
+    margin-left: 0%;}
+
+footer .redes{justify-content: center;}
+
+footer .logo-footer {
+    width: 50%;
+}
+
+.boton.boton-rojo{margin-left: 10vh;}
+.container{
+    width: 100%;}
+
+.columna-mobile-100{
+    width: 100%;}
+
+.columna-mobile-50{
+    width: 50%;}
+
+.empujar-mobile-0{
+margin-left:0;}
+
+.sinpadding-mobile{
+    padding: 0;}
+
+#inicio {
+    height: 100vh;}
+
+#inicio img{
+    height: 100%;
+    object-position: center;
+    object-fit: cover;}
+
+#inicio .bloque-inicio{
+    justify-content: center;
+    width: 100%;
+}
+
+#inicio h1{margin-left: 10vh;}
+#inicio p{margin-left: 10vh;}
+
+#servicios .bloque-servicios {
+    margin-bottom: 15px;}
+
+#contactenos {
+    padding: 0;}
+
+#contactenos iframe{
+    position: relative;
+    height: 50vh;} /*vh es el tamaño de la pantalla del cel*/
+}
